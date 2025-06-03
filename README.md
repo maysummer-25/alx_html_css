@@ -37,5 +37,3 @@ To ensure your HTML files render with styles:
 - The goal is to progressively build styling skills by layering CSS onto static HTML files.
 
 ---
-
-Feel free to update `styles.css` as you learn more advanced CSS techniques.
