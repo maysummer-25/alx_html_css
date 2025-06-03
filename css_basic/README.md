@@ -1,42 +1,35 @@
-# css_basic
+# CSS Basic
 
-This project is part of the ALX Software Engineering HTML & CSS curriculum. It introduces the basics of styling web pages using external CSS files.
+This directory contains the second phase of the **HTML & CSS** project for the **ALX SE Program**, focusing on basic styling using CSS.
 
-## Description
+## Files
 
-In this task, we copied HTML files from the previous `html_basic` project and added styling to improve their appearance. Two CSS files are used:
+- `index.html` — Main webpage.
+- `tweets.html` — Additional page linked from the main page.
+- `base.css` — Provided stylesheet with foundational layout and structure.
+- `styles.css` — Custom styles added to enhance the appearance of the pages.
 
-- `base.css`: Contains default styles to reset and normalize elements.
-- `styles.css`: A custom stylesheet for writing additional styles (currently empty).
+## Features Implemented
 
-## File Structure
+- **Linked external stylesheets** (`base.css` and `styles.css`).
+- Applied **Flexbox** to layout sections (`header`, `main`, `footer`, `article`, `aside`).
+- Adjusted **viewport** for responsive design using:
+  ```html
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  ```
+- Used the class `works_on_smartphone` to ensure proper layout on smaller screens.
+- Added a **logo** using a Unicode character (`🎈`) with special styling.
+- Basic **custom styling** added:
+  - Background colors
+  - Font colors
+  - Padding and margin
+  - Section-specific styling for `header`, `footer`, `article`, `aside`
 
-```
-css_basic/
-├── base.css        # Default CSS rules
-├── styles.css      # Custom styles (empty for now)
-├── index.html      # Home page HTML
-├── tweets.html     # Tweets page HTML
-└── README.md       # Project documentation
-```
+## How to View
 
-## How to Use
+Open `index.html` in a browser to see the full layout and styles. Ensure that both `base.css` and `styles.css` are in the same directory for correct rendering.
 
-Open `index.html` or `tweets.html` in a web browser. Both files include links to the CSS styles:
+## Notes
 
-```html
-<link href="base.css" rel="stylesheet">
-<link href="styles.css" rel="stylesheet">
-```
-
-Make sure these CSS files are in the same folder as the HTML files.
-
-## Requirements
-
-- All files end with a new line.
-- No external libraries or frameworks are used.
-- The code is W3C compliant and validates with the [W3C Validator](https://validator.w3.org/).
-
-## Author
-
-Project by Mmesoma Chukwumezie for the ALX Software Engineering program.
+- No external libraries used — pure HTML and CSS only.
+- Fully W3C-compliant and designed to degrade nicely on mobile view.

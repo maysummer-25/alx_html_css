@@ -1,20 +1,77 @@
 body {
     display: flex;
     flex-direction: column;
+    background-color: #eaeaea;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
 }
 
 main {
     display: flex;
     flex-direction: row;
     flex: auto;
+    margin: 1rem;
 }
 
 article {
     flex: 2;
     overflow-y: auto;
+    background-color: #ffffff;
+    padding: 1rem;
+    margin: 1rem;
+    color: #333;
 }
 
 aside {
     flex: 1;
     overflow-y: auto;
+    background-color: #f0f0f0;
+    padding: 1rem;
+    margin: 1rem;
+    color: #333;
+}
+
+/* Basic styling for header */
+header {
+    background-color: #004080;
+    color: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+  
+/* Basic styling for nav links */
+header ul {
+    background-color: #004080;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+}
+  
+header ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    background-color: #004080;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    margin-top: auto;
+}
+
+/* Basic Styling for the Table */
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
 }
