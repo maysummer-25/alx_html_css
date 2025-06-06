@@ -17,14 +17,7 @@ Welcome to the **School Page** project! This is a fully responsive, visually app
 
 ## 📁 File Structure
 
-alx_html_css/
-└── css_advanced/
-    ├── images/         # Project images (downloaded from Figma or ZIP)
-    ├── fonts/          # Custom fonts (Source Sans Pro & Spin-Cycle-OT)
-    ├── index.html      # Main HTML file
-    ├── style.css       # Custom CSS styles
-    └── README.md       # Project documentation
-
+<pre> alx_html_css/ └── css_advanced/ ├── images/ # Project images (downloaded from Figma or ZIP) ├── fonts/ # Custom fonts (Source Sans Pro & Spin-Cycle-OT) ├── index.html # Main HTML file ├── style.css # Custom CSS styles └── README.md # Project documentation </pre>
 ---
 
 ## 🖼️ Figma Design Reference
