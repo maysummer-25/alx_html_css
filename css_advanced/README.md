@@ -19,11 +19,11 @@ Welcome to the **School Page** project! This is a fully responsive, visually app
 
 alx_html_css/
 └── css_advanced/
-├── images/ # Project images (downloaded from Figma or ZIP)
-├── fonts/ # Custom fonts (Source Sans Pro & Spin-Cycle-OT)
-├── index.html # Main HTML file
-├── style.css # Custom CSS styles
-└── README.md # Project documentation
+    ├── images/         # Project images (downloaded from Figma or ZIP)
+    ├── fonts/          # Custom fonts (Source Sans Pro & Spin-Cycle-OT)
+    ├── index.html      # Main HTML file
+    ├── style.css       # Custom CSS styles
+    └── README.md       # Project documentation
 
 ---
 
