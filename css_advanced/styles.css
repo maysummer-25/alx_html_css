@@ -1,0 +1,529 @@
+ /* Styles.css */
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', Arial, sans-serif; 
+    color: #fff; /* Default text color for the page */
+    background-color: #1a1a1a; /* A dark background to match the overall theme */
+}
+
+/* Header Styling */
+header {
+    position: absolute; /* Allows content below to start from top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; /* Ensure header is on top of other content */
+    padding: 20px 0; /* Add some vertical padding */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Adjust as needed for content width */
+    margin: 0 auto;
+    padding: 0 20px; /* Horizontal padding */
+}
+
+nav img {
+    height: 30px; /* Adjust logo height as needed */
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px; /* Spacing between navigation items */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: opacity 0.3s ease;
+}
+
+nav ul li a:hover {
+    opacity: 0.8;
+}
+
+/* First Section (Banner) Styling */
+.hero-section { /* Added a class for clarity, apply to the first section */
+    position: relative;
+    background-image: url('./images/Object.png'); /* Assuming the main background image */
+    background-size: cover;
+    background-position: center;
+    min-height: 800px; /* Adjust height based on content and design */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 100px; /* To prevent header content from being covered */
+}
+
+/* Overlay for the background image */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: 1;
+}
+
+.hero-content, .pros-section {
+    position: relative;
+    z-index: 2; /* Ensure content is above the overlay */
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 80px; /* Large font size for "Get schooled" */
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-content > div { /* Container for SMILES GRIN LAUGH */
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Spacing between words */
+    margin-bottom: 40px;
+}
+
+.hero-content span {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero-content button {
+    background-color: #C271FF; /* Purple button color */
+    color: #fff;
+    border: none;
+    border-radius: 20px; /* Rounded corners */
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    margin-bottom: 120px; /* Space before "Learn from the pros" */
+}
+
+.hero-content button:hover {
+    opacity: 0.9;
+}
+
+/* "Learn from the pros" section */
+.pros-section h2 {
+    font-size: 30px; /* Font size for "Learn from the pros" */
+    color: #fff;
+    margin-bottom: 50px;
+    font-weight: 300; /* Lighter weight */
+}
+
+.pros-cards { /* Container for the four profile cards */
+    display: flex;
+    justify-content: center; /* Center the cards */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 30px; /* Space between cards */
+}
+
+.pros-card { /* Individual profile card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px; /* Limit card width */
+    text-align: center;
+}
+
+.pros-card img {
+    width: 150px; /* Fixed width for profile images */
+    height: 150px; /* Fixed height for profile images */
+    border-radius: 50%; /* Make images circular */
+    object-fit: cover; /* Ensure images cover the area */
+    margin-bottom: 15px;
+}
+
+.pros-card h3 {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.pros-card p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7); /* Slightly lighter color for description */
+    line-height: 1.4;
+}
+
+/* Quote Section Styling */
+.quote-section {
+    background-color: #C271FF; /* The purple background shown in the image */
+    padding: 80px 20px; /* Adjust vertical padding */
+    text-align: center; /* Center content horizontally within the section */
+}
+
+.quote-container {
+    display: flex; /* Use flexbox for image and text alignment */
+    align-items: center; /* Vertically align items in the middle */
+    justify-content: center; /* Center the flex items horizontally */
+    max-width: 800px; /* Constrain the width of the quote container */
+    margin: 0 auto; /* Center the container itself */
+    gap: 40px; /* Space between the image and the text */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.quote-container img {
+    width: 160px; /* Set a fixed width for the profile image */
+    height: 160px; /* Set a fixed height for the profile image */
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image covers the area */
+    flex-shrink: 0; /* Prevent the image from shrinking */
+}
+
+.quote-container figure {
+    margin: 0; /* Reset default figure margin */
+    text-align: left; /* Align text within the quote block to the left */
+    flex-grow: 1; /* Allow the figure to grow and take available space */
+    max-width: 600px; /* Limit width of quote text for readability */
+}
+
+.quote-container blockquote {
+    font-size: 22px; /* Adjust font size as per visual */
+    font-weight: 400; /* Regular weight */
+    color: #fff;
+    line-height: 1.6; /* Improve readability */
+    margin: 0 0 20px 0; /* Remove default blockquote margin, add bottom margin */
+    padding: 0; /* Remove default blockquote padding */
+}
+
+.quote-container figcaption h3 {
+    font-size: 20px; /* Name font size */
+    font-weight: 700; /* Bold name */
+    color: #fff;
+    margin: 0 0 5px 0; /* Adjust margin */
+}
+
+.quote-container figcaption p {
+    font-size: 16px; /* Title font size */
+    color: rgba(255, 255, 255, 0.8); /* Slightly lighter color for title */
+    margin: 0;
+}
+
+/* Most Popular Tutorials Section Styling */
+.popular-tutorials-section {
+    padding: 80px 20px; /* Consistent padding with other main sections */
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center; /* To center the heading */
+}
+
+.popular-tutorials-section h2 {
+    font-size: 32px; /* Adjust font size for main section heading */
+    font-weight: 300; /* Lighter weight */
+    color: #fff;
+    margin-bottom: 60px; /* Space below heading */
+}
+
+.tutorial-cards {
+    display: flex;
+    justify-content: center; /* Center the cards if there's extra space */
+    flex-wrap: wrap; /* Allow cards to wrap to the next line on smaller screens */
+    gap: 30px; /* Space between tutorial cards */
+}
+
+.tutorial-card {
+    background-color: #1a1a1a; /* Assuming the card background is the same as body, or slightly different */
+    max-width: 270px; /* Set a max width for each card */
+    text-align: left; /* Align text within the card to the left */
+    border-radius: 5px; /* Subtle rounded corners for the card */
+    overflow: hidden; /* Ensures image corners are also rounded if image has full width */
+    position: relative; /* For play button positioning */
+    display: flex; /* Use flex for internal layout */
+    flex-direction: column; /* Stack content vertically */
+}
+
+.tutorial-card img:first-child { /* Targets the main video thumbnail */
+    width: 100%;
+    height: 150px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensure image covers the area */
+    border-radius: 5px 5px 0 0; /* Rounded top corners */
+}
+
+.tutorial-card .play-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px; /* Same height as image */
+    background-color: rgba(194, 113, 255, 0.6); /* Purple overlay for play button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tutorial-card .play-button::before {
+    content: '\f144'; /* Font Awesome play circle icon */
+    font-family: "Font Awesome 5 Free"; /* Ensure Font Awesome is loaded */
+    font-weight: 900; /* For solid icon */
+    font-size: 60px; /* Size of the play button icon */
+    color: #fff; /* White color for the play button */
+}
+
+
+.tutorial-card h3 { /* Tutorial title */
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    margin: 15px 15px 5px 15px; /* Padding inside the card */
+}
+
+.tutorial-card .tutorial-description {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.5;
+    margin: 0 15px 15px 15px; /* Padding inside the card */
+    flex-grow: 1; /* Allows description to take up space, pushing author/rating down */
+}
+
+.tutorial-card .tutorial-author {
+    display: flex;
+    align-items: center;
+    margin: 0 15px 10px 15px; /* Padding inside the card */
+}
+
+.tutorial-card .tutorial-author img {
+    width: 30px; /* Smaller author image */
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.tutorial-card .tutorial-author h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #C271FF; /* Purple color for author name */
+    margin: 0;
+}
+
+.tutorial-card .tutorial-rating {
+    display: flex; /* Make stars appear in a row */
+    gap: 3px; /* Space between stars */
+    margin: 0 15px 10px 15px; /* Padding inside the card */
+    align-items: center;
+}
+
+.tutorial-card .tutorial-rating i {
+    color: #C271FF; /* Filled star color (purple) */
+    font-size: 15px; /* Star size */
+}
+
+.tutorial-card .tutorial-rating .fa-regular { /* For empty stars */
+    color: rgba(255, 255, 255, 0.2); /* Lighter color for empty stars */
+}
+
+.tutorial-card .tutorial-duration {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.5); /* Faded color for duration */
+    text-align: right; /* Align duration to the right */
+    margin: 0 15px 15px 15px; /* Padding inside the card */
+}
+
+/* Membership Section Styling */
+.membership-section {
+    background-color: #1a1a1a; /* Dark background, same as body or slightly different tone */
+    padding: 80px 20px; /* Consistent padding */
+    text-align: center; /* Center the heading and button */
+}
+
+.membership-section h2 {
+    font-size: 32px;
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 60px;
+}
+
+.membership-features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow items to wrap */
+    gap: 30px; /* Space between feature items */
+    margin-bottom: 50px; /* Space between features and button */
+    max-width: 1000px; /* Constrain width of features grid */
+    margin-left: auto; /* Center the feature grid */
+    margin-right: auto; /* Center the feature grid */
+}
+
+.feature-item {
+    flex: 1 1 200px; /* Allows items to grow/shrink, with a base width of 200px */
+    max-width: 250px; /* Max width for each item */
+    text-align: center;
+    padding: 20px; /* Padding inside each feature item */
+}
+
+.feature-item img { /* Targets the smile.svg icons */
+    width: 50px; /* Adjust size of icons */
+    height: 50px;
+    margin-bottom: 20px;
+    /* fill: #C271FF; If the SVG is embedded directly or loaded as background */
+}
+
+.feature-item .feature-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.feature-item .feature-description {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.5;
+}
+
+.membership-button {
+    background-color: #C271FF; /* Purple button color */
+    color: #fff;
+    border: none;
+    border-radius: 20px; /* Rounded corners */
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    margin-top: 20px; /* Space above button */
+}
+
+.membership-button:hover {
+    opacity: 0.9;
+}
+
+/* FAQ Section Styling */
+.faq-section {
+    background-color: #fff; /* White background as per Figma */
+    padding: 80px 20px; /* Consistent padding */
+    text-align: center; /* Center the heading */
+}
+
+.faq-section h2 {
+    font-size: 32px;
+    font-weight: 300;
+    color: #000; /* Black color for heading on white background */
+    margin-bottom: 60px;
+}
+
+.faq-content {
+    display: flex; /* Use flexbox for two columns */
+    justify-content: center; /* Center the columns horizontally */
+    flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+    max-width: 1000px; /* Limit content width */
+    margin: 0 auto; /* Center the content container */
+    gap: 40px; /* Space between columns */
+}
+
+.faq-column {
+    flex: 1 1 45%; /* Allow columns to grow/shrink, taking roughly 45% of space each */
+    max-width: 480px; /* Max width for each column */
+    /* text-align: left; Often good to align text within columns to the left */
+}
+
+.faq-item {
+    margin-bottom: 40px; /* Space between FAQ items */
+    text-align: left; /* Align text within each FAQ item to the left */
+}
+
+.faq-item .faq-question {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000; /* Black color for question on white background */
+    margin-bottom: 10px;
+}
+
+.faq-item .faq-answer {
+    font-size: 14px;
+    color: #000; /* Black color for answer on white background */
+    line-height: 1.6;
+}
+
+/* Footer Styling */
+.main-footer {
+    background-color: #000; /* Black background as per Figma */
+    padding: 40px 20px; /* Adjust padding as needed */
+    text-align: center; /* Center the copyright text */
+}
+
+.main-footer .footer-content {
+    max-width: 1200px; /* Max width for content within the footer */
+    margin: 0 auto; /* Center the content */
+    display: flex;
+    flex-direction: column; /* Stack logo/social and copyright vertically */
+    align-items: center; /* Center items horizontally */
+    gap: 30px; /* Space between top section and copyright */
+}
+
+.main-footer .footer-top {
+    display: flex;
+    justify-content: space-between; /* Space out logo and social icons */
+    align-items: center; /* Vertically align them */
+    width: 100%; /* Take full width of its parent (.footer-content) */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    padding-bottom: 20px; /* Add some space above copyright on smaller screens if wraps */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle line above copyright */
+}
+
+.main-footer .footer-top img {
+    height: 30px; /* Adjust logo height as needed */
+    width: auto;
+    flex-shrink: 0; /* Prevent logo from shrinking too much */
+}
+
+.main-footer .social-icons {
+    display: flex;
+    gap: 20px; /* Space between social icons */
+}
+
+.main-footer .social-icons a {
+    color: #fff; /* White color for social icons */
+    font-size: 24px; /* Adjust size of social icons */
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.main-footer .social-icons a:hover {
+    opacity: 0.8;
+}
+
+.main-footer .footer-copyright {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5); /* Faded white for copyright text */
+    margin: 0; /* Remove default paragraph margin */
+    padding-top: 20px; /* Space from the line above */
+}
+
+/* General main section styling (adjusted to exclude all new sections) */
+main section:not(.hero-section):not(.quote-section):not(.popular-tutorials-section):not(.membership-section):not(.faq-section) {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
